@@ -1,6 +1,7 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 
-const ImageStyled = styled.img<{
+const ImageStyled = styled(Image)<{
   $fit?: 'cover' | 'contain'
 }>`
   object-fit: ${({ $fit = 'cover' }) => $fit};
