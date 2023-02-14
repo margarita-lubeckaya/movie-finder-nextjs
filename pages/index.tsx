@@ -9,7 +9,6 @@ import InfoService from '@services/info.service'
 // const inter = Inter({ subsets: ['latin'] })
 
 function Home({ data }: { data: IHomepageData }) {
-  console.log(data)
   return (
     <>
       <Head>
@@ -22,22 +21,14 @@ function Home({ data }: { data: IHomepageData }) {
   )
 }
 
-//
-// Home.getInitialProps = async ctx => {
-//     try {
-//         const res = await axios.get('http://localhost:1337/api/restaurants');
-//         const restaurants = res.data;
-//         return { restaurants };
-//     } catch (error) {
-//         return { error };
-//     }
-// };
-
 export async function getStaticProps() {
   const [upcomingMovies, popularMovies] = await Promise.all([
     InfoService.getUpcoming(),
     InfoService.getPopular(),
   ])
+
+  // console.log('popularMovies')
+  // console.log(popularMovies)
 
   return {
     props: {

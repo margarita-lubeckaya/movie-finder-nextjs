@@ -26,14 +26,14 @@ const InfoService = {
     })
     return data
   },
-  async getGenres(): Promise<{ results: string[] }> {
-    const { data } = await axios.get(`${API_URL}/titles/utils/genres`)
-    return data
-  },
-  async getTitleTypes(): Promise<{ results: string[] }> {
-    const { data } = await axios.get(`${API_URL}/titles/utils/titleTypes`)
-    return data
-  },
+  // async getGenres(): Promise<{ results: string[] }> {
+  //   const { data } = await axios.get(`${API_URL}/titles/utils/genres`)
+  //   return data
+  // },
+  // async getTitleTypes(): Promise<{ results: string[] }> {
+  //   const { data } = await axios.get(`${API_URL}/titles/utils/titleTypes`)
+  //   return data
+  // },
 }
 
 export default InfoService

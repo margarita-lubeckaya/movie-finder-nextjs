@@ -9,8 +9,8 @@ const Homepage = ({ data: { upcoming, popular } }: { data: IHomepageData }) => {
 
   return (
     <>
-      {popular.movies ? <HomeSection data={popular} /> : null}
-      {upcoming.movies ? <HomeSection data={upcoming} /> : null}
+      {popular.movies.length ? <HomeSection data={popular} /> : null}
+      {upcoming.movies.length ? <HomeSection data={upcoming} /> : null}
     </>
   )
 }
